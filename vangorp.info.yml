@@ -1,0 +1,15 @@
+name: vangorp
+type: theme
+description: 'Patisserie Van Gorp'
+base theme: classy
+package: Custom
+core: 8.x
+version: 1.0.0
+
+libraries:
+  - vangorp/globalstyle
+  - vangorp/fonts
+  - vangorp/javascript
+
+regions:
+  content: Inhoud

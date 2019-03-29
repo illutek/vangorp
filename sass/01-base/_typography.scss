@@ -1,0 +1,38 @@
+// /////////////////////////
+// @@ FONTS
+// ////////////////////////
+
+html {
+  font-family: $ff-ss;
+}
+
+body {
+  font: {
+    size: $ff-size;
+    weight: $fw-normal;
+  }
+
+  color: $clr-text;
+  line-height: 2rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: $fw-bold;
+}
+
+h1 {
+  font-size: 4vw;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}

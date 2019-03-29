@@ -1,0 +1,38 @@
+// /////////////////////////
+// @@ HEADER
+// ////////////////////////
+
+.header {
+  height: 10rem;
+  background: $brown;
+  border-bottom: 1rem solid $light-brown;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    grid-template-areas: 
+      "name logo menu-icon"
+  }
+}
+
+.site {
+
+  &__logo {
+    grid: logo;
+    width: 13rem;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__menu {
+    display: none;
+  }
+}
+
+.menu-icon {
+  grid-area: menu-icon;
+}

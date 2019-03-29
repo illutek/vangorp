@@ -1,0 +1,41 @@
+// /////////////////////////
+// @@ BASE
+// ////////////////////////
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1 rem is
+  // Why? 10px easy to convert everything to rem
+  // 62.5% =  10px/16px (default)
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: $clr-link;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

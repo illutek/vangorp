@@ -1,0 +1,28 @@
+// /////////////////////////
+// @@ GRID
+// ////////////////////////
+
+.grid {
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(55vw, 85vw) minmax(1rem, 1fr);
+    grid-template-areas: ". wrapper .";
+
+    @include mq(tablet) {
+      grid-template-columns: minmax(1rem, 1fr) minmax(55vw, 75vw) minmax(1rem, 1fr);
+    }
+
+    @include mq(desktop) {
+      grid-template-columns: minmax(3rem, 1fr) minmax(55vw, 120rem) minmax(3rem, 1fr);
+    }
+
+    @include mq(big-desktop) {
+      grid-template-columns: minmax(1rem, 1fr) 120rem minmax(1rem, 1fr);
+    }
+
+  }
+
+  &__row {
+    grid-area: wrapper;
+  }
+}
