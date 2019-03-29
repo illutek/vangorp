@@ -1,0 +1,15 @@
+// /////////////////////////
+// @@ HERO
+// ////////////////////////
+
+.hero {
+  min-height: 30rem;
+  background: $brown;
+  background: url(../images/hero--small.jpg) no-repeat center;
+  background-size: cover;
+
+  @include mq(desktop) {
+    min-height: 40rem;
+  }
+  
+}

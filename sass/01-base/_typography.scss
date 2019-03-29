@@ -16,14 +16,24 @@ body {
   line-height: 2rem;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: $fw-bold;
 }
 
 h1 {
-  font-size: 4vw;
+  font: {
+    size: 2.8vw;
+    weight: $fw-bold;
+  }
   line-height: 100%;
-  text-transform: uppercase;
+  color: $dark-vanilla;
+
+  @include mq(desktop) {
+    font-size: 3.8rem;
+  }
 }
 
 h2 {

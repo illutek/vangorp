@@ -3,14 +3,14 @@
 // ////////////////////////
 
 .header {
-  height: 10rem;
+  // height: 11rem;
   background: $brown;
   border-bottom: 1rem solid $light-brown;
 
   &__inner {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    grid-template-columns: 2fr 1fr 2fr;
+    // grid-gap: 2rem;
     align-items: center;
     grid-template-areas: 
       "name logo menu-icon"
@@ -21,7 +21,7 @@
 
   &__logo {
     grid: logo;
-    width: 13rem;
+    width: 15rem;
   }
 
   &__name {
