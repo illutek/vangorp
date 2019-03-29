@@ -26,6 +26,19 @@
 
   &__name {
     grid-area: name;
+
+    &-first, &-last {
+      display: block;
+
+      @include mq(desktop) {
+        display: inline;
+      }
+    }
+
+    &-first {
+      margin-bottom: .5rem;
+    }
+
   }
 
   &__menu {

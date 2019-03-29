@@ -1,0 +1,35 @@
+// /////////////////////////
+// @@ BUTTONS
+// ////////////////////////
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    @include btn(transparant, transparant);
+  }
+
+  @include hover();
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    @include box-shadow;
+  }
+
+  &--purple {
+    @include btn($btn-purple...);
+  }
+
+  &--brown {
+    // mixin btn bundled with a list on _variables.scss
+    @include btn($btn-brown...);
+  }
+
+  &--full-width {
+    width: 100%;
+    text-align: center;
+  }
+
+}
