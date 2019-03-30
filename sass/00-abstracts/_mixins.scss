@@ -59,3 +59,11 @@ $breakpoints: (
     @include box-shadow;
   }
 }
+
+@mixin panel($bg, $clr: $dark-vanilla) {
+  width: 66vw;
+  min-height: 17.5rem;
+  color: $clr;
+  padding: 1.5rem;
+  background-color: $bg;
+}

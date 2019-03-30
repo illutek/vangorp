@@ -1,0 +1,41 @@
+// /////////////////////////
+// @@ PANELS 
+// ////////////////////////
+
+.panels-region {
+  z-index: 5;
+}
+
+.panel {
+
+  &__address {
+    @include panel($bg: $brown);
+
+    background: url('../images/panel-address-bcg.jpg') no-repeat center;
+    background-size: cover;
+    margin: -5rem auto 3rem;
+
+    &-grid {
+      
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+
+    }
+
+    &-info {
+      justify-self: center;
+    }
+    
+  }
+
+  &__images {
+    display: none;
+  }
+
+  &__opening-hours {
+    @include panel($bg: $light-brown);
+
+    margin: 0 auto 3rem;
+
+  }
+}
