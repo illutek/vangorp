@@ -1,0 +1,62 @@
+// /////////////////////////
+// @@ MENU OVERLAY
+// ////////////////////////
+
+.close__button {
+  position: absolute;
+  right: 2rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.menu-overlay {
+  // display: none;
+  position: absolute;
+  right: -80vw;
+  top: 0;
+  min-width: 80vw;
+  height: 100vh;
+  background: $brown;
+  border: 1rem solid $light-brown;
+  padding: 2rem;
+  z-index: 999;
+  transition: all .3s;
+
+  &__wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__inner {
+    max-width: 75%;
+  }
+
+  &__list {
+    margin-bottom: 3rem;
+  }
+
+  &__items {
+    & > li:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &--visible {
+    right: 0;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $dark-vanilla;
+  margin-bottom: 2rem;
+
+  &:hover {
+    color: $white;
+  }
+}
