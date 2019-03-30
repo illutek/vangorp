@@ -42,6 +42,12 @@
     grid-area: aboutus;
     z-index: 2;
     text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.04);
+    }
   }
 
   &__cta {
