@@ -1,0 +1,11 @@
+// /////////////////////////
+// @@ FOOTER BOTTOM
+// ////////////////////////
+
+.footer__bottom {
+  text-align: center;
+  font: {
+    size: calc(#{$ff-size} - .3rem);
+  }
+  margin-bottom: 3rem;
+}
