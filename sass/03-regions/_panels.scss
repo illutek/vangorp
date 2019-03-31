@@ -9,22 +9,32 @@
 
 .panel {
 
+  &__news {
+    @include panel($bg: $gray, $clr: $black);
+
+    display: flex;
+    align-items: center;
+    background: url('../images/panel-news-bcg.jpg') no-repeat center;
+    background-size: cover;
+    margin: -4rem auto 3rem;
+  }
+
   &__address {
     @include panel($bg: $brown);
 
     background: url('../images/panel-address-bcg.jpg') no-repeat center;
     background-size: cover;
-    margin: -5rem auto 3rem;
+    margin: 0 auto 3rem;
 
-    &-grid {
+    &__grid {
       
       display: grid;
       grid-template-rows: 1fr 2fr;
-
     }
 
     &-info {
       justify-self: center;
+      padding-top: 1rem;
     }
     
   }
@@ -35,8 +45,19 @@
 
   &__opening-hours {
     @include panel($bg: $light-brown);
+    background: url('../images/panel-opening-hours-bcg.jpg') no-repeat center;
+    background-size: cover;
 
     margin: 0 auto 3rem;
+
+    &__grid {
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+    }
+
+    &__info {
+      justify-self: center;
+    }
 
   }
 }
