@@ -1,0 +1,16 @@
+// /////////////////////////
+// @@ ADVERTISEMENT-MSG 
+// ////////////////////////
+
+.advertisement-msg {
+
+  background: $brown;
+  color: $dark-vanilla;
+  text-align: center;
+  padding: 3rem 0;
+
+  &__inner {
+    max-width: 45vw;
+    margin: 0 auto;
+  }
+}
