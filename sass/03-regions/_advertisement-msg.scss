@@ -7,10 +7,20 @@
   background: $brown;
   color: $dark-vanilla;
   text-align: center;
-  padding: 3rem 0;
+  
   margin-bottom: 3rem;
 
+  @include mq(desktop) {
+    background: none;
+  }
+
   &__inner {
+    background: $brown;
+    padding: 3rem 0;
+    width: 100%;
+  }
+
+  &__info {
     max-width: 45vw;
     margin: 0 auto;
   }
