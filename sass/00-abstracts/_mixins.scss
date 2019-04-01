@@ -69,6 +69,7 @@ $breakpoints: (
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto 3rem;
   @include mq(tablet){width: 100%;}
   @include mq(desktop){border-radius: 60% 60% 0 0;}
 }

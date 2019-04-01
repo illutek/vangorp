@@ -4,6 +4,7 @@
 
 .panels-region {
   z-index: 5;
+  margin-top: -3rem;
   margin-bottom: 3rem;
 
   &__grid {
@@ -38,8 +39,6 @@
     background-image: url('../images/panel-news-bcg.jpg') no-repeat center;
     background-size: cover;
   
-    margin: -4rem auto 3rem;
-
     @include mq(desktop) {
       border-radius: 0 0 0 0;
       margin: 0 auto 3rem;
@@ -58,8 +57,7 @@
     @include panel($bg: $brown);
     background: url('../images/panel-address-bcg.jpg') no-repeat center;
     background-size: cover;
-    margin: 0 auto 3rem;
-
+    
 
     @include mq(desktop) {
       margin: -4rem auto 3rem;
@@ -86,8 +84,6 @@
     @include panel($bg: $light-brown);
     background: url('../images/panel-opening-hours-bcg.jpg') no-repeat center;
     background-size: cover;
-
-    margin: 0 auto 3rem;
 
     @include mq(desktop) {
       margin: -4rem auto 3rem;
