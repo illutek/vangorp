@@ -3,22 +3,23 @@
 // ////////////////////////
 
 .header {
-  // height: 11rem;
   background: $brown;
   border-bottom: 1rem solid $light-brown;
 
   &__inner {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
-    // grid-gap: 2rem;
     align-items: center;
-    grid-template-areas: 
-      "name logo menu-icon"
+    grid-template-areas: "name logo menu-icon";
+
+    @include mq(desktop) {
+      grid-template-columns: 1fr 2fr 2fr;
+      grid-template-areas: "logo name menu-icon";
+    }
   }
 }
 
 .site {
-
   &__logo {
     grid: logo;
     width: 15rem;
@@ -27,7 +28,8 @@
   &__name {
     grid-area: name;
 
-    &-first, &-last {
+    &-first,
+    &-last {
       display: block;
 
       @include mq(desktop) {
@@ -36,16 +38,39 @@
     }
 
     &-first {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
-
   }
 
   &__menu {
     display: none;
+    justify-self: end;
+
+    &__items {
+      display: flex;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $dark-vanilla;
+    }
+
+    @include mq(desktop) {
+      display: block;
+    }
   }
 }
 
 .menu-icon {
   grid-area: menu-icon;
+
+  @include mq(desktop) {
+    display: none;
+  }
 }
