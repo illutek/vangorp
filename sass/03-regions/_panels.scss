@@ -5,59 +5,95 @@
 .panels-region {
   z-index: 5;
   margin-bottom: 3rem;
+
+  &__grid {
+
+    @include mq(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-column-gap: 3rem;
+      grid-template-areas: 
+        "news news"
+        "address open";
+    }
+
+    @include mq(desktop) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      
+      grid-template-areas: 
+        "address img open"
+        "news news news";
+    }
+  }
 }
 
 .panel {
 
   &__news {
-    @include panel($bg: $gray, $clr: $black);
-
-    display: flex;
-    align-items: center;
-    background: url('../images/panel-news-bcg.jpg') no-repeat center;
+    grid-area: news;
+    @include panel($bg: $dark-vanilla, $clr: $black);
+    background-image: url('../images/panel-news-bcg.jpg') no-repeat center;
     background-size: cover;
+  
     margin: -4rem auto 3rem;
+
+    @include mq(desktop) {
+      border-radius: 0 0 0 0;
+      margin: 0 auto 3rem;
+      width: 100%;
+      text-align: center;
+      background-image: none;
+    }
+
+    &__inner {
+      width: 100%;
+    }
   }
 
   &__address {
+    grid-area: address;
     @include panel($bg: $brown);
-
     background: url('../images/panel-address-bcg.jpg') no-repeat center;
     background-size: cover;
     margin: 0 auto 3rem;
 
-    &__grid {
-      
-      display: grid;
-      grid-template-rows: 1fr 2fr;
+
+    @include mq(desktop) {
+      margin: -4rem auto 3rem;
     }
 
-    &-info {
-      justify-self: center;
-      padding-top: 1rem;
-    }
+    &-info {}
     
   }
 
   &__images {
+    grid-area: img;
+    @include panel($padding: 0, $bg: $light-brown);
+    overflow: hidden;
     display: none;
+
+    @include mq(desktop) {
+      display: block;
+      margin: -4rem auto 3rem;
+    }
   }
 
   &__opening-hours {
+    grid-area: open;
     @include panel($bg: $light-brown);
     background: url('../images/panel-opening-hours-bcg.jpg') no-repeat center;
     background-size: cover;
 
     margin: 0 auto 3rem;
 
-    &__grid {
-      display: grid;
-      grid-template-rows: 1fr 2fr;
+    @include mq(desktop) {
+      margin: -4rem auto 3rem;
     }
 
-    &__info {
-      justify-self: center;
-    }
+    &__inner {}
 
   }
 }

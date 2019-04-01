@@ -60,10 +60,15 @@ $breakpoints: (
   }
 }
 
-@mixin panel($bg, $clr: $dark-vanilla) {
-  width: 66vw;
+@mixin panel($bg, $padding: 1.5rem, $clr: $dark-vanilla) {
+  width:80%;
   min-height: 20rem;
   color: $clr;
-  padding: 1.5rem;
+  padding: $padding;
   background-color: $bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(tablet){width: 100%;}
+  @include mq(desktop){border-radius: 60% 60% 0 0;}
 }
